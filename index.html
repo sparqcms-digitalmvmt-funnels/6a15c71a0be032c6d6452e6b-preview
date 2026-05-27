@@ -9,7 +9,7 @@ const route = async () => {
   if (localStorage.getItem('sK_r')) return JSON.parse(localStorage.getItem('sK_r'));
   try {
     const sessionId = MVMT.getSessionId() || localStorage.getItem("mvmt_session_id") || "";
-    const url = 'https://func-ab-test-events-prod-001.azurewebsites.net/api/checkRoute?id=6a15c71a0be032c6d6452e6b&v=177981219511095&sessionId='+sessionId;
+    const url = 'https://func-ab-test-events-prod-001.azurewebsites.net/api/checkRoute?id=6a15c71a0be032c6d6452e6b&v=177988496677823&sessionId='+sessionId;
     const response = await fetch(url);
     if (!response.ok) throw new Error('Network response was not ok');
     const data = await response.json();
